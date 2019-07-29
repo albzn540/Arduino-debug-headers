@@ -10,7 +10,7 @@
 #define ERROR_ENABLED
 #define DEBUG_ENABLED
 
-#ifdef `DEBUG_PORT
+#ifdef DEBUG_PORT
   #define DebugInit(baud) Serial.begin(baud)
 #else
   #define DebugInit(baud)
@@ -35,12 +35,12 @@
 
 void chipInformation() {
   Serial.println();
-  Serial.print( F("Heap: ") );  Serial.println(system_get_free_heap_size());
-  Serial.print( F("Boot Vers: ") );  Serial.println(system_get_boot_version());
-  Serial.print( F("CPU: ") );  Serial.println(system_get_cpu_freq());
-  Serial.print( F("SDK: ") );  Serial.println(system_get_sdk_version());
-  Serial.print( F("Chip ID: ") );  Serial.println(system_get_chip_id());
-  Serial.print( F("Flash ID: ") );  Serial.println(spi_flash_get_id());
+  Serial.print( F("Heap: ") );  Serial.println(ESP.getFreeHeap());
+  Serial.print( F("Boot Vers: ") );  Serial.println(ESP.getBootVersion());
+  Serial.print( F("CPU: ") );  Serial.println(ESP.getCpuFreqMHz());
+  Serial.print( F("SDK: ") );  Serial.println(ESP.getSdkVersion());
+  Serial.print( F("Chip ID: ") );  Serial.println(ESP.getChipId());
+  Serial.print( F("Flash ID: ") );  Serial.println(ESP.getFlashChipId());
   Serial.print( F("Flash Size: ") );  Serial.println(ESP.getFlashChipRealSize());
   Serial.print( F("Vcc: ") );  Serial.println(ESP.getVcc());
   Serial.println();
