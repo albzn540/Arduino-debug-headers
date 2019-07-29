@@ -16,6 +16,7 @@ $ ./install.sh
 
 ## How to use
 
+In your src/main.cpp file  
 ``` cpp
 #include "Logger.cpp"
 
