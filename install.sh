@@ -10,4 +10,5 @@ cp Arduino-debug-headers/Logger.cpp include/Logger.cpp
 
 echo "Cleaning up ..."
 rm -R Arduino-debug-headers
+rm install.sh
 echo "${green}Done ... ${reset}"
