@@ -17,10 +17,7 @@ $ ./install.sh
 ## How to use
 
 ``` cpp
-// Initialize debugger
-DebugInit(115200);
-
-void testFunction() {
+void testFunction() { // Function you want to debug
   Debugf("Debug message\n");
   // "Debug message"
 
@@ -32,5 +29,10 @@ void testFunction() {
 
   ErrFunc("Error message\n");
   // ERROR: [testFunction] Error message 
+}
+
+void setup() {
+  // Initialize debugger
+  DebugInit(115200);
 }
 ```
