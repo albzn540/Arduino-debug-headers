@@ -17,6 +17,8 @@ $ ./install.sh
 ## How to use
 
 ``` cpp
+#include "Logger.cpp"
+
 void testFunction() { // Function you want to debug
   Debugf("Debug message\n");
   // "Debug message"
